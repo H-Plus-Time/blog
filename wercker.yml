@@ -5,7 +5,7 @@ deploy:
         name: trigger build of gh-pages repo
         code: |
           curl  -H 'Content-Type: application/json' -H  \
-          'Authorization: Bearer $WERCKER_TOKEN' -X POST -d \
+          "Authorization: Bearer $WERCKER_TOKEN" -X POST -d \
           '{"applicationId": "H-Plus-Time.github.io", "branch":"master-dev", \
           "message":"content update"}' \
           https://app.wercker.com/api/v3/builds
