@@ -1,22 +1,11 @@
 box: node:4.2.6-slim
-build:
-  steps:
-    - npm-install
-    - script:
-        name: bower install
-        code: |
-          ./node_modules/bower/bin/bower install --allow-root --config.interactive=false
 deploy:
   steps:
     - script:
-        name: clone posts
+        name: trigger build of gh-pages repo
         code: |
           curl  -H 'Content-Type: application/json' -H  \
           'Authorization: Bearer $WERCKER_TOKEN' -X POST -d \
           '{"applicationId": "H-Plus-Time.github.io", "branch":"master-dev", \
           "message":"content update"}' \
           https://app.wercker.com/api/v3/builds
-    - leipert/git-push:
-        branch: master
-        gh_oauth: $GITHUB_TOKEN
-        basedir: build/bundled
