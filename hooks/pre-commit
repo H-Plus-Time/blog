@@ -1,1 +1,2 @@
 git ls-files > file-list
+echo generated file list
