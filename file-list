@@ -3,3 +3,4 @@ about.md
 file-list
 hello_world.md
 hooks/pre-commit
+wercker.yml
