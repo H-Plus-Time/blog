@@ -1,4 +1,4 @@
-box: ubuntu:trusty
+box: node:4.2.6-slim
 build:
   steps:
     - npm-install
