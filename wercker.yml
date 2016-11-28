@@ -6,6 +6,6 @@ deploy:
         code: |
           curl  -H 'Content-Type: application/json' -H  \
           "Authorization: Bearer $WERCKER_TOKEN" -X POST -d \
-          '{"applicationId": "H-Plus-Time.github.io", "branch":"master-dev", \
-          "message":"content update"}' \
-          https://app.wercker.com/api/v3/builds
+          '{"applicationId": "583c53b76bd7f10100c620dd", "branch":"master-dev",
+          "pipelineId": "583c53b76bd7f10100c620e0"}' \
+          https://app.wercker.com/api/v3/runs
