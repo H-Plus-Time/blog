@@ -1,4 +1,4 @@
-box: ubuntu/trusty
+box: ubuntu:trusty
 build:
   steps:
     - npm-install
