@@ -10,7 +10,7 @@ deploy:
         name: install bower, install components
         code: |
           npm install -g bower
-          bower install
+          bower install --allow-root
     - alrayyes/surge-deploy:
         login: 'hplustime@gmail.com'
         directory: "public"
