@@ -7,9 +7,10 @@ deploy:
           mkdir public
           cp -r posts public
     - script:
-        name: install bower, install components
+        name: install bower, git, install components
         code: |
           npm install -g bower
+          apk add git
           bower install --allow-root
     - alrayyes/surge-deploy:
         login: 'hplustime@gmail.com'
