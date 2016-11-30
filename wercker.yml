@@ -11,12 +11,8 @@ deploy:
         code: |
           npm install -g bower
           apk add --update git
+          apk add --update curl
           bower install --allow-root
-    - alrayyes/surge-deploy:
-        login: 'hplustime@gmail.com'
-        directory: "public"
-        token: $SURGE_TOKEN
-        domain: "blogcontent.hplustime.com"
     - script:
         name: trigger build of gh-pages repo
         code: |
