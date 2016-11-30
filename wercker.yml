@@ -1,6 +1,16 @@
 box: andthensome/alpine-surge-bash
 deploy:
   steps:
+    - script:
+        name: copy resources to public dir
+        code: |
+          mkdir public
+          cp -r posts public
+    - script:
+        name: install bower, install components
+        code: |
+          npm install -g bower
+          bower install
     - alrayyes/surge-deploy:
         login: 'hplustime@gmail.com'
         directory: "public"
