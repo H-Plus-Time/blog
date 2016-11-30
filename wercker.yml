@@ -14,5 +14,5 @@ deploy:
           curl  -H 'Content-Type: application/json' -H  \
           "Authorization: Bearer $WERCKER_TOKEN" -X POST -d \
           '{"applicationId": "583e49726dade10100763cef", "branch":"master",
-          "pipelineId": "583e5a0c0fc74d0100020f2f"}' \
+          "pipelineId": "583e49d06dade10100763d13"}' \
           https://app.wercker.com/api/v3/runs
