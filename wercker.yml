@@ -1,6 +1,11 @@
-box: node:4.2.6-slim
+box: andthensome/alpine-surge-bash
 deploy:
   steps:
+    - alrayyes/surge-deploy:
+        login: 'hplustime@gmail.com'
+        directory: "public"
+        token: $SURGE_TOKEN
+        domain: "blogcontent.hplustime.com"
     - script:
         name: trigger build of gh-pages repo
         code: |
