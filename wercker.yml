@@ -10,7 +10,7 @@ deploy:
         name: install bower, git, install components
         code: |
           npm install -g bower
-          apk add git
+          apk add --update git
           bower install --allow-root
     - alrayyes/surge-deploy:
         login: 'hplustime@gmail.com'
